@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Ingresa el tiempo que has permanecido en el estacionamiento (en minutos): ");
+        int tiempo = int.Parse(Console.ReadLine());
+
+        double precio;
+
+        if (tiempo <= 60)
+        {
+            precio = 5.00;
+        }
+        else if (tiempo <= 120)
+        {
+            precio = 15.00;
+        }
+        else
+        {
+            precio = 40.00;
+        }
+
+        Console.WriteLine("El precio a pagar por el estacionamiento es de: $" + precio.ToString("0.00"));
+
+        Console.ReadKey();
+    }
+}
